@@ -55,7 +55,7 @@ class GoodSolution // O(N^2) & S(1)
 
 class BetterSolution // O(N^2) & S(1)
 {
-    // we will use technique used in Two-sum to optimise this.
+    // we will use technique used in Two-sum to optimize this.
     // for each value N, we will find a two sum for N-1 values of (X- Nth) value
   public:
     bool TwoSum(int A[], int size, int Y, int j)
