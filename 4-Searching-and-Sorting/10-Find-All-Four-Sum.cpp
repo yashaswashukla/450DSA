@@ -8,7 +8,7 @@ GFG: https://practice.geeksforgeeks.org/problems/find-all-four-sum-numbers1732/1
  * only one set of four sums.
  * Article can be found on this link:
  * https://www.geeksforgeeks.org/find-four-elements-that-sum-to-a-given-value-set-2/
- * 
+ *
  */
 class TwoPointerSolution // O(n^3+nLogn) & S(1)
 {
@@ -64,4 +64,3 @@ class TwoPointerSolution // O(n^3+nLogn) & S(1)
         return answer;
     }
 };
-
