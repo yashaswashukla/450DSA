@@ -35,42 +35,62 @@ using namespace std;
 
 class Solution
 {
-  public:
-    vector<int> spiralOrder(vector<vector<int>> &matrix)
+public:
+    vector<int> spirallyTraverse(vector<vector<int>> matrix, int r, int c)
     {
-        vector<int> answer; // for returning the answer
 
-        int Left{0};                          // Left pointer init to 0
-        int Right{(int)matrix[0].size() - 1}; // Right pointer init to size of row(M)
-        int Top{0};                           // Top pointer init to 0
-        int Bottom{(int)matrix.size() - 1};   // Bottom pointer init to size of column (N)
+        // Direction 1: Traversing the top row from left to right
+        // Direction 2: Traversing the right column from top to bottom
+        // Direction 3: Traversing the bottom row from right to left
+        // Direction 4: Traversing the left column from bottom to top
 
-        while (Left <= Right and Top <= Bottom)
+        if (r == 0)
+            return {};
+
+        int top = 0, bottom = r - 1, left = 0, right = c - 1;
+
+        vector<int> answer;
+
+        while (top <= bottom && left <= right)
         {
-            // Moving L -> R
-            for (int i = Left; i <= Right; ++i)
-                answer.push_back(matrix[Top][i]);
-            ++Top; // removing the visited row
+            // Direction 1:
 
-            // Moving T -> B
-            for (int i = Top; i <= Bottom; ++i)
-                answer.push_back(matrix[i][Right]);
-            --Right; // removing the visited column
+            for (int i = left; i <= right; i++)
+            {
+                answer.push_back(matrix[top][i]);
+            }
+            top++;
 
-            // for row only and column only matrix and to handle edge cases.
-            if (Top > Bottom or Left > Right)
+            // Direction 2:
+
+            for (int i = top; i <= bottom; i++)
+            {
+                answer.push_back(matrix[i][right]);
+            }
+            right--;
+
+            // Before going further checking the edge cases
+
+            if (top > bottom or left > right)
                 break;
 
-            // Moving R -> L
-            for (int i = Right; i >= Left; --i)
-                answer.push_back(matrix[Bottom][i]);
-            --Bottom; // removing the visited row
+            // Direction 3:
 
-            // Moving B -> T
-            for (int i = Bottom; i >= Top; --i)
-                answer.push_back(matrix[i][Left]);
-            ++Left; // removing the visited column
+            for (int i = right; i >= left; i--)
+            {
+                answer.push_back(matrix[bottom][i]);
+            }
+            bottom--;
+
+            // Direction 4:
+
+            for (int i = bottom; i >= top; i--)
+            {
+                answer.push_back(matrix[i][left]);
+            }
+            left++;
         }
+
         return answer;
     }
 };
