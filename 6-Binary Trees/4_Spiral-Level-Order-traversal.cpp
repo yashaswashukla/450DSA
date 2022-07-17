@@ -1,6 +1,5 @@
 class _2stackSolution
 {
-
     vector<vector<int>> zigzagLevelOrder(TreeNode *root)
     {
 
@@ -109,4 +108,4 @@ class dequeSolution
         }
         return res;
     }
-}
+};

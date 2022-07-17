@@ -21,7 +21,7 @@ int MaxElement(int a[], int size)
     return MaxElement(a, size - 1);
 }
 
-// we can optimise this recursive solution by making less comparisons.
+// we can optimize this recursive solution by making less comparisons.
 pair<int, int> TournamentMethod(int a[], int low, int high)
 {
 

@@ -29,7 +29,7 @@ class GreedySolution // O(N) & S(1)
 
         for (int i = 0; i < size - 1; i++)
         {
-			// for every iteration updating the Maximumreachable position.
+			// for every iteration updating the Maximum reachable position.
             MaxIndexReachable = max(MaxIndexReachable, i + arr[i]);
 
             if (i == limit)

@@ -16,7 +16,8 @@ class ImprovedKadandeAlgorithm
 public:
     int MSS(vector<int> &nums)
     {
-       //In this method we don't have to count the number of negative values as it already takes the maximum possible negative value present in the array
+       //In this method we don't have to count the number of negative values as it already takes the maximum possible
+       // negative value present in the array
         
         int maxendinghere = 0, sum = INT_MIN;
 

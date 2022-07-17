@@ -26,7 +26,7 @@ void STLReverse(int a[], int size)
     // we have to mention first and last iterators to reverse it.
     // vectors and similar containers in STL
     // reverse({container_name}.begin(),{container_name}.end()) is used to reverse the entire container.
-    // to reverse till a specfic segment we have to define an iterator to taht location or we can use
+    // to reverse till a specific segment we have to define an iterator to that location or we can use
     // {container_name.begin()+ n} where n belongs to int class.
 
     reverse(a, a + size);

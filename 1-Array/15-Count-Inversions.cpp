@@ -60,7 +60,7 @@ class Solution // O(nlogn)  S(N)
             inverse_count += MergeSort(arr, low, mid);
             inverse_count += MergeSort(arr, mid + 1, high);
 
-            inverse_count += Merge(arr, low, mid, high);
+            inverse_count += Merge(arr, low, mid, high);    
         }
         return inverse_count;
     }
