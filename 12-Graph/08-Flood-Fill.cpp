@@ -55,8 +55,6 @@ private:
 public:
     void dfs(int x, int y, vector<vector<int>> &image, int orig_color, int color)
     {
-        if (image[x][y] != orig_color)
-            return;
         image[x][y] = color;
 
         for (int i = 0; i < 4; i++)
