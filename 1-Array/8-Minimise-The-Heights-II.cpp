@@ -5,7 +5,7 @@
     * without using extra space.
     * We will sort the array and keep the inital result as difference.
     * for any element in middle say x and its right value y
-    	we have ro minimize the range if we plot them on number line so all the elements on left will be added k in them
+        we have ro minimize the range if we plot them on number line so all the elements on left will be added k in them
         and all the element in right we will sub k with them.
         and update the smallest and largest and will keep the result.
 
@@ -14,12 +14,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution //O(nlogn)
+class Solution // O(nlogn)
 {
-  public:
+public:
     int getMinDiff(int a[], int n, int k)
     {
-        sort(a, a + n); //O(nlogn)
+        sort(a, a + n); // O(nlogn)
 
         int mini, maxi, result = a[n - 1] - a[0];
         int smallest = a[0] + k;
@@ -33,7 +33,6 @@ class Solution //O(nlogn)
                 continue;
             result = min(result, maxi - mini);
         }
-
 
         return result;
     }

@@ -31,6 +31,20 @@ public:
         head->next = nullptr;
         return rest;
     }
+
+    ListNode *helper(ListNode *head, ListNode *prev)
+    {
+        if (!head)
+            return prev;
+        ListNode *next = head->next;
+        head->next = prev;
+        return helper(next, head);
+    }
+
+    ListNode *reverseList(ListNode *head)
+    {
+        return helper(head, NULL);
+    }
 }
 
 class iterativeSolution // O(N) & S(1)

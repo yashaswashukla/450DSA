@@ -4,7 +4,7 @@
 
     https://www.youtube.com/watch?v=hZkb_Dqu7YY
 
-    you cannot inint al the values of an array int a[]={} like this to a non-zero value, it will do for only first
+    you cannot init al the values of an array int a[]={} like this to a non-zero value, it will do for only first
    index.
 */
 
@@ -17,6 +17,7 @@ class GreedySolution // O(N) & S(1)
   public:
     int minJumps(int arr[], int size)
     {
+        
         if (size < 2) // nowhere to go
             return 0;
 
